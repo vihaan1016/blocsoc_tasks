@@ -1,0 +1,33 @@
+#board {
+    width: 375px;
+    height: 375px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+}
+
+.square {
+    width: 120px;
+    height: 120px;
+    border: 1px solid black;
+    background-color: white;
+    font-size: 40px;
+}
+
+.square:hover {
+    background-color: lightblue;
+}
+
+#restartButton {
+    display: block;
+    height: 50px;
+    width: 150px;
+    background-color: white;
+    border: 1px solid black;
+    font-size: 20px;
+}
+
+#restartButton:hover {
+    background-color: lightblue;
+    color: white;
+}

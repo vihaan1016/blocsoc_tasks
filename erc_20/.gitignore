@@ -1,0 +1,27 @@
+# Foundry artifacts
+out/
+cache/
+broadcast/
+snapshots/
+
+# Environment files
+.env
+.env.*
+!.env.example # Keep the example file
+
+# Dependency artifacts (e.g., from Node.js projects if applicable)
+node_modules/
+npm-debug.log
+yarn-error.log
+lerna-debug.log
+
+# Operating System Files
+.DS_Store
+.project
+.classpath
+
+# IDE/Editor Files
+.idea/
+.vscode/
+*.swp
+*.swo

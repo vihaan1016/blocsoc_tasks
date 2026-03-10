@@ -1,0 +1,34 @@
+// SPDX-License-Identifier: MIT
+// Compatible with OpenZeppelin Contracts ^5.6.0
+pragma solidity ^0.8.27;
+
+import {Ownable} from "lib/openzeppelin-contracts/contracts/access/Ownable.sol";
+import {ERC20} from "lib/openzeppelin-contracts/contracts/token/ERC20/ERC20.sol";
+import {ERC20Burnable} from "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/ERC20Burnable.sol";
+import {ERC20Permit} from "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/ERC20Permit.sol";
+import {ERC20Votes} from "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/ERC20Votes.sol";
+import {Nonces} from "lib/openzeppelin-contracts/contracts/utils/Nonces.sol";
+
+contract DaoToken is ERC20, ERC20Burnable, Ownable, ERC20Permit, ERC20Votes {
+    constructor(address recipient, address initialOwner)
+        ERC20("DaoToken", "DTK")
+        Ownable(initialOwner)
+        ERC20Permit("DaoToken")
+    {
+        _mint(recipient, 10000 * 10 ** decimals());
+    }
+
+    function mint(address to, uint256 amount) public onlyOwner {
+        _mint(to, amount);
+    }
+
+    // The following functions are overrides required by Solidity.
+
+    function _update(address from, address to, uint256 value) internal override(ERC20, ERC20Votes) {
+        super._update(from, to, value);
+    }
+
+    function nonces(address owner) public view override(ERC20Permit, Nonces) returns (uint256) {
+        return super.nonces(owner);
+    }
+}

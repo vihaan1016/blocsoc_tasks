@@ -1,3 +1,9 @@
 [submodule "erc_20/lib/foundry-devops"]
 	path = erc_20/lib/foundry-devops
 	url = https://github.com/Cyfrin/foundry-devops
+[submodule "account_abstraction/lib/account-abstraction"]
+	path = account_abstraction/lib/account-abstraction
+	url = https://github.com/eth-infinitism/account-abstraction
+[submodule "account_abstraction/lib/openzeppelin-contracts"]
+	path = account_abstraction/lib/openzeppelin-contracts
+	url = https://github.com/openzeppelin/openzeppelin-contracts

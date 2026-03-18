@@ -1,0 +1,17 @@
+{
+  "../erc_20/lib/foundry-devops": {
+    "rev": "efff097a87e70c3d15661c9f2a2daeae0b33d5d5"
+  },
+  "lib/account-abstraction": {
+    "tag": {
+      "name": "v0.7.0",
+      "rev": "7af70c8993a6f42973f520ae0752386a5032abe7"
+    }
+  },
+  "lib/openzeppelin-contracts": {
+    "tag": {
+      "name": "v5.0.2",
+      "rev": "dbb6104ce834628e473d2173bbc9d47f81a9eec3"
+    }
+  }
+}
